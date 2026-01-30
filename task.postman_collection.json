@@ -1,0 +1,206 @@
+{
+  "info": {
+    "_postman_id": "8f4213f6-8486-4412-b7c3-9014ea5fd476",
+    "name": "task",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "34051005"
+  },
+  "item": [
+    {
+      "name": "product",
+      "item": [
+        {
+          "name": "/api/products",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{    \r\n\"name\":\"first\",\r\n\"sku\":\"3232\",\r\n\"stock\":6,\r\n\"price\":100\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/products",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "products"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/api/products",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "{{base_url}}/api/products",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "products"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/api/products/:productId/status",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "{{base_url}}/api/products/:productId/status",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "products",
+                ":productId",
+                "status"
+              ],
+              "variable": [
+                {
+                  "key": "productId",
+                  "value": "697b9119e6a046b5279d1e0c"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "cart",
+      "item": [
+        {
+          "name": "/api/cart/reserve",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"userId\": \"user_i9vkmtt5sq\",\r\n    \"productId\": \"697b9119e6a046b5279d1e0c\",\r\n    \"quantity\": 1\r\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/cart/reserve",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "cart",
+                "reserve"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/reserve-multiple",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/cart/reserve-multiple",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "cart",
+                "reserve-multiple"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "cancel",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"userId\": \"user_i9vkmtt5sq\",\r\n    \"productId\": \"697b9119e6a046b5279d1e0c\",\r\n    \"quantity\": 1\r\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/cart/cancel",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "cart",
+                "cancel"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "checkout",
+      "item": [
+        {
+          "name": "checkout",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    productId:\"697b9119e6a046b5279d1e0c\"\r\n    quantity: 1\r\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/checkout",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "checkout"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
