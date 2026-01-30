@@ -15,15 +15,7 @@ A backend API for managing flash deal product reservations with Redis-based stoc
 - **Tailwind CSS** – Utility-first CSS framework
 - **Fetch API** – API communication
 
----
 
-## Demo Video
-
-```html
-<video width="100%" controls>
-  <source src="taskvideo.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
 ## How to Start
 
 1. **Prerequisites:**
